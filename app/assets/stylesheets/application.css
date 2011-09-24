@@ -1,0 +1,50 @@
+/*
+ * FIXME: Introduce SCSS & Sprockets
+ *= require_tree . 
+*/
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+
+#header {
+  position: absolute;
+  top: 0px;
+  height: 32px;
+  left: 0px;
+  right: 0px;
+  background: black;
+  color: white;
+}
+
+#map {
+  position: absolute;
+  top: 32px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+#header div {
+  float: left;
+  width: 500px;
+  padding: 7px;
+}
+
+#header div.data {
+  width: 180px;
+  padding: 7px;
+  font-size: 0.9em;
+}
+
+
+.geohash-tile {
+  font-weight: bold;
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  position: absolute;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  background: rgba(255, 204, 104, 0.3);
+}

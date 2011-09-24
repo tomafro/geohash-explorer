@@ -1,0 +1,18 @@
+<div id="header">
+<div><b>Move your mouse. Click on the map and zoom. Refresh to reset</b></div>
+<div class="data"><b>Geohash: </b><span id="geohash"></span></div>
+<div class="data"><b>Lat: </b><span id="lat"></span></div>
+<div class="data"><b>Lng: </b><span id="lng"></span></div>
+</div>
+<div id="map">
+</div>
+<% if geohash %>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+  geohash = decodeGeoHash("<%= geohash %>")
+  googleMap.setCenter(new google.maps.LatLng(geohash.latitude[2], geohash.longitude[2]))
+  googleMap.setZoom("<%= geohash %>".length * 2)
+  new GeoHashRectangle("<%= geohash %>", googleMap)
+})
+</script>
+<% end %>
